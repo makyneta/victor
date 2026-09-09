@@ -1,0 +1,156 @@
+/* =========================================================
+   PAGE 404 — ESTILO FITNESS
+   ========================================================= */
+
+.page-404-body{
+  min-height: 100vh;
+  background: var(--anthracite);
+  color: var(--off-white);
+  overflow: hidden;
+}
+
+.page-404-bg{
+  position: fixed;
+  inset: 0;
+  background:
+    linear-gradient(135deg, rgba(20, 19, 15, 0.86) 0%, rgba(20, 19, 15, 0.96) 100%),
+    url("../images/victor/631549980_1213685930743520_3973340338984521647_n.webp") center/cover no-repeat;
+  filter: saturate(0.7);
+}
+
+.page-404-main{
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: clamp(32px, 5vw, 72px);
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: clamp(48px, 8vw, 96px) var(--gutter);
+}
+
+.page-404-content{
+  max-width: 620px;
+}
+
+.page-404-content h1{
+  font-size: clamp(2.4rem, 6vw, 5rem);
+  line-height: 0.96;
+  margin-bottom: 20px;
+}
+
+.page-404-copy{
+  font-size: 1.05rem;
+  color: var(--muted);
+  max-width: 52ch;
+  margin-bottom: 28px;
+}
+
+.page-404-actions{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.btn-secondary{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  border: 1px solid rgba(242, 238, 228, 0.25);
+  background: transparent;
+  color: var(--off-white);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: border-color .3s var(--ease), background .3s var(--ease), color .3s var(--ease);
+}
+
+.btn-secondary:hover{
+  border-color: var(--olive-bright);
+  background: rgba(122, 140, 84, 0.08);
+}
+
+.page-404-visual{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 360px;
+}
+
+.page-404-code{
+  position: relative;
+  z-index: 2;
+  font-family: var(--font-display);
+  font-size: clamp(6rem, 15vw, 16rem);
+  line-height: 1;
+  letter-spacing: 0.04em;
+  color: rgba(242, 238, 228, 0.18);
+  text-shadow: 0 0 18px rgba(122, 140, 84, 0.35);
+}
+
+.page-404-ring{
+  position: absolute;
+  width: min(72vw, 390px);
+  height: min(72vw, 390px);
+  border-radius: 50%;
+  border: 1px solid rgba(122, 140, 84, 0.7);
+  box-shadow: inset 0 0 24px rgba(122, 140, 84, 0.18), 0 0 36px rgba(122, 140, 84, 0.18);
+}
+
+.page-404-ring::before,
+.page-404-ring::after{
+  content: "";
+  position: absolute;
+  inset: 18%;
+  border-radius: 50%;
+  border: 1px solid rgba(242, 238, 228, 0.2);
+}
+
+.page-404-ring::after{
+  inset: 32%;
+}
+
+.page-404-tag{
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.72rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(242, 238, 228, 0.7);
+}
+
+@media (max-width: 720px){
+  .page-404-main{
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .page-404-content{
+    max-width: none;
+  }
+
+  .page-404-copy{
+    max-width: none;
+  }
+
+  .page-404-actions{
+    justify-content: center;
+  }
+
+  .page-404-visual{
+    order: -1;
+    min-height: 260px;
+  }
+
+  .page-404-tag{
+    letter-spacing: 0.18em;
+    bottom: 10px;
+  }
+}
