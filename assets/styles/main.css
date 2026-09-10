@@ -587,6 +587,9 @@ button:focus-visible{
 .contact-actions{
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
   margin-bottom: 30px;
 }
 
@@ -611,10 +614,22 @@ button:focus-visible{
   transform: translateY(-2px);
 }
 
+.contact-cta--secondary{
+  border-color: rgba(242, 238, 228, 0.3);
+  background: rgba(242, 238, 228, 0.04);
+}
+
+.contact-cta--secondary:hover{
+  background: rgba(242, 238, 228, 0.12);
+  color: var(--off-white);
+}
+
 .social-list{
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 18px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  max-width: 920px;
+  margin: 0 auto;
 }
 
 .social-link{
@@ -622,10 +637,11 @@ button:focus-visible{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 14px;
+  gap: 12px;
   min-height: 220px;
-  padding: 28px 20px;
+  padding: 26px 18px;
   border: 1px solid rgba(242, 238, 228, 0.12);
+  border-radius: 18px;
   background: rgba(242, 238, 228, 0.02);
   color: var(--muted);
   text-align: center;
@@ -708,6 +724,12 @@ button:focus-visible{
 
 @media (max-width: 720px){
   .partners-grid{ grid-template-columns: 1fr; }
+  .social-list{ grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+  .social-link{ min-height: 140px; padding: 14px 8px; gap: 8px; }
+  .social-icon-wrap{ width: 42px; height: 42px; border-radius: 10px; }
+  .social-icon{ width: 20px; height: 20px; }
+  .social-label{ font-size: 0.8rem; }
+  .social-meta{ font-size: 0.62rem; }
 
   .nav-toggle{ display: flex; }
 
