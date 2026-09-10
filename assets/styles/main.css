@@ -242,7 +242,7 @@ button:focus-visible{
 .hero-media{
   position: absolute;
   inset: 0;
-  background-image: url("../images/victor/649217854_17936842290187614_2417191829740460593_n..webp");
+  background-image: url("../images/victor/IMG_8291-pc.webp");
   background-size: cover;
   background-position: center;
   /* placeholder tonal fallback enquanto a foto real não é aplicada */
@@ -250,7 +250,7 @@ button:focus-visible{
 }
 
 @media (max-width: 720px){
-  .hero-media{ background-image: url("../images/victor/649217854_17936842290187614_2417191829740460593_n..webp"); }
+  .hero-media{ background-image: url("../images/victor/IMG_8291.webp"); }
 }
 
 .hero-overlay{
